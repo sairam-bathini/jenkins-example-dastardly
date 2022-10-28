@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    DASTARDLY_TARGET_URL='https://www.darinpope.com/'
+    DASTARDLY_TARGET_URL='https://ginandjuice.shop/'
   }
   stages {
     stage ("Docker Pull Dastardly from Burp Suite container image") {
