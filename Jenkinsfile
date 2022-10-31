@@ -15,7 +15,7 @@ pipeline {
       steps {
         cleanWs()
         sh '''
-          docker run --user $(id -u) -v ${WORKSPACE}:${WORKSPACE}:rw \
+          docker run --rm --user $(id -u) -v ${WORKSPACE}:${WORKSPACE}:rw \
           -e DASTARDLY_TARGET_URL=${DASTARDLY_TARGET_URL} \
           -e DASTARDLY_OUTPUT_FILE=${WORKSPACE}/${JUNIT_TEST_RESULTS_FILE} \
           ${IMAGE_WITH_TAG}
